@@ -13,6 +13,7 @@ DeviceAddress green = { 0x28, 0xFF, 0xF5, 0xB3, 0x62, 0x15, 0x03, 0x3E };
 LiquidCrystal lcd(0x27, 16, 2);
 
 const int delayTime = 500;
+const String topLine = "Derby Grammar";
 
 void setup() {
   Serial.begin(9600);
