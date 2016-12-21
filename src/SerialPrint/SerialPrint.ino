@@ -10,6 +10,11 @@ DeviceAddress green = { 0x28, 0xFF, 0xF5, 0xB3, 0x62, 0x15, 0x03, 0x3E };
 
 void setup() {
   
+
+  sensors.begin();
+  sensors.setResolution(black, 10);
+  sensors.setResolution(red, 10);
+  sensors.setResolution(green, 10;
 }
 
 void loop() {
