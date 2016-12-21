@@ -18,7 +18,10 @@ void setup() {
 }
 
 void loop() {
-  
+  sensors.requestTemperatures():
+  Serial.print(getTemp(black) + " ");
+  Serial.print(getTemp(red) + " ");
+  Serial.print(getTemp(green) + " \n");
 }
 
 String getTemp(DeviceAddress address) {
