@@ -25,11 +25,27 @@ void setup() {
 void loop() {
   sensors.requestTemperatures():
 
+  lcd.clear();
   lcd.print(topLine);
   lcd.setCursor(0, 1);
   lcd.print("Black: " + getTemp(black));
 
   delay(delayTime);
+
+  lcd.clear();
+  lcd.print(topLine);
+  lcd.setCursor(0, 1);
+  lcd.print("Red:   " + getTemp(red));
+
+  delay(delayTime);
+
+  lcd.clear();
+  lcd.print(topLine);
+  lcd.setCursor(0, 1);
+  lcd.print("Green: " + getTemp(green));
+
+  delay(delayTime);
+ 
 }
 
 String getTemp(DeviceAddress address) {
