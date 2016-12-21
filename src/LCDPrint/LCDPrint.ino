@@ -45,16 +45,14 @@ String getTemp(DeviceAddress address) {
 
 void printToLCD(DeviceAddress address, String sensorName) {
   String tempC = getTemp(address);
-
-  if(sensorName.length() == 3) { //ie name is red
-    lcd.clear();
-    lcd.print(topLine);
-    lcd.setCursor(0, 1);
+  
+  lcd.clear();
+  lcd.print(topLine);
+  lcd.setCursor(0, 1);
+ 
+  if(sensorName.length() == 3) { //ie name is red  
     lcd.print(sensorName + ":   " + tempC);
   } else {
-    lcd.clear();
-    lcd.print(topLine);
-    lcd.setCursor(0, 1);
     lcd.print(sensorName + ": " + tempC;
   }
   
