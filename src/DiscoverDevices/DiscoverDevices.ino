@@ -1,4 +1,5 @@
 #include <OneWire.h>
+OneWire ourBus(2); //connect data to pin 2  
 
 void setup() {
   Serial.begin(9600);
