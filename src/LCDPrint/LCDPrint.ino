@@ -16,8 +16,6 @@ const int delayTime = 500;
 const String topLine = "Derby Grammar";
 
 void setup() {
-  Serial.begin(9600);
-
   sensors.begin();
   sensors.setResolution(black, 10);
   sensors.setResolution(red, 10);
@@ -26,9 +24,10 @@ void setup() {
 
 void loop() {
   sensors.requestTemperatures():
-  Serial.print(getTemp(black) + " ");
-  Serial.print(getTemp(red) + " ");
-  Serial.print(getTemp(green) + " \n");
+
+  lcd.print(topLine);
+  lcd.setCursor(0, 1);
+  lcd.print("Black: " + getTemp(black));
 
   delay(delayTime);
 }
@@ -42,4 +41,3 @@ String getTemp(DeviceAddress address) {
     return "Error";
   }
 }
-
