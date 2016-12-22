@@ -16,11 +16,11 @@ void setup() {
   sensors.begin();
   sensors.setResolution(black, 10);
   sensors.setResolution(red, 10);
-  sensors.setResolution(green, 10;
+  sensors.setResolution(green, 10);
 }
 
 void loop() {
-  sensors.requestTemperatures():
+  sensors.requestTemperatures();
   Serial.print(getTemp(black) + " ");
   Serial.print(getTemp(red) + " ");
   Serial.print(getTemp(green) + " \n");
