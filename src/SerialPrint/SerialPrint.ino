@@ -30,11 +30,9 @@ void loop() {
 
 String getTemp(DeviceAddress address) {
   float tempC = sensors.getTempC(address);
-
   if(tempC != -127.00) {
     return String(tempC);
   } else {
     return "Error";
   }
 }
-
