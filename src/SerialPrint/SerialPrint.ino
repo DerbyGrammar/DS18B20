@@ -29,10 +29,8 @@ void loop() {
 }
 
 String getTemp(DeviceAddress address) {
+  sensors.requestTemperatures();
   float tempC = sensors.getTempC(address);
-  if(tempC != -127.00) {
-    return String(tempC);
-  } else {
-    return "Error";
-  }
+  return (tempC != -127.00) ? String(tempC) : "Error";
 }
+
